@@ -1,0 +1,7 @@
+# exclude everything except directory foo/bar
+ bin/
+ /bin
+ /bin/
+ /bin/*
+ obj/
+  
