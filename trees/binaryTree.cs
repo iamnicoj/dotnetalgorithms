@@ -207,10 +207,5 @@ namespace trees.datastructure
         public List<T>  InOrderTransverse(){
             return null;
         }
-
-        // TODO
-        public void BalanceTree(){
-
-        }
     }
 }

@@ -39,10 +39,10 @@ namespace trees.datastructure
                 this.Head = new AVTNode<T>(item);
                 return;
             }
-            innerAddBalancedTree(this.Head, item);      
+            this.Head = innerAddBalancedTree(this.Head, item);      
         }
 
-        private void innerAddBalancedTree(AVTNode<T> current, T item)
+        private AVTNode<T> innerAddBalancedTree(AVTNode<T> current, T item)
         {
             var value = Comparer<T>.Default.Compare(current.Element, item);
 
@@ -51,21 +51,21 @@ namespace trees.datastructure
                     current.Left = new AVTNode<T>(item);
                 }
                 else{
-                    innerAddBalancedTree(current.Left, item);
+                    current.Left = innerAddBalancedTree(current.Left, item);
                 }
             }else{
                 if (current.Right == null){
                     current.Right = new AVTNode<T>(item);
                 }
                 else{
-                    innerAddBalancedTree(current.Right, item);
+                    current.Right = innerAddBalancedTree(current.Right, item);
                 }
             }
 
             current.BalanceFactor = this.innerLevels(current.Right) - this.innerLevels(current.Left);
 
             // CHECH BALANCE            
-            AVTNode<T> temp = null;
+            AVTNode<T> temp;
             switch (current.BalanceFactor)
             {
                 case 2:
@@ -103,7 +103,7 @@ namespace trees.datastructure
                             current = temp.Left.Right;
                             temp.Left.Right = current.Left;
                             current.Left = temp.Left;
-                            temp.Left = current.Left;
+                            temp.Left = current.Right;
                             current.Right = temp;
                             temp.BalanceFactor += 2;
                             current.Left.BalanceFactor--;
@@ -114,25 +114,16 @@ namespace trees.datastructure
                             temp = current;
                             current = temp.Left;
                             temp.Left = current.Right;
-                            current.Right = temp;
+                            current.Right = temp;                            
                             temp.BalanceFactor += 2;
                             current.BalanceFactor++;
                         }
                     }                
-                break;
-
+                    break;
                 default:
-                break;
-            }         
-            
-            // current.BalanceFactor = this.innerLevels(current.Right) - this.innerLevels(current.Left);
-            // if(temp!= null)
-            // {
-            // temp.BalanceFactor = this.innerLevels(temp.Right) - this.innerLevels(temp.Left);
-                
-            // }
-
-
+                    break;
+            }
+            return current;
         }
 
         public T searchRecursive(T item){
@@ -201,7 +192,7 @@ namespace trees.datastructure
             }
         }
 
-         public void InnerPrintLevel(AVTNode<T> current, int level, int elevator){
+        private void InnerPrintLevel(AVTNode<T> current, int level, int elevator){
             if(current == null) return;
             if(level == elevator){
                 System.Console.WriteLine("Level {0} Item {1} BalanceFactor {2}", level, current.Element.ToString(), current.BalanceFactor.ToString());                
@@ -222,15 +213,6 @@ namespace trees.datastructure
                 System.Console.WriteLine("Level {0} - Item {1} -  BalanceFactor {2}", level.ToString(), current.Element.ToString(), current.BalanceFactor);
                 innerPrintInOrder(current.Right, level + 1);
             }
-        }
-
-        public List<T>  InOrderTransverse(){
-            return null;
-        }
-
-        // TODO
-        public void BalanceTree(){
-
         }
     }
 }
