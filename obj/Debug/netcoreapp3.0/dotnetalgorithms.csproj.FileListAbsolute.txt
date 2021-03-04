@@ -1,0 +1,11 @@
+/Users/nicolasjimenez/myrepos/dotnetalgorithms/bin/Debug/netcoreapp3.0/dotnetalgorithms
+/Users/nicolasjimenez/myrepos/dotnetalgorithms/bin/Debug/netcoreapp3.0/dotnetalgorithms.deps.json
+/Users/nicolasjimenez/myrepos/dotnetalgorithms/bin/Debug/netcoreapp3.0/dotnetalgorithms.runtimeconfig.json
+/Users/nicolasjimenez/myrepos/dotnetalgorithms/bin/Debug/netcoreapp3.0/dotnetalgorithms.runtimeconfig.dev.json
+/Users/nicolasjimenez/myrepos/dotnetalgorithms/bin/Debug/netcoreapp3.0/dotnetalgorithms.dll
+/Users/nicolasjimenez/myrepos/dotnetalgorithms/bin/Debug/netcoreapp3.0/dotnetalgorithms.pdb
+/Users/nicolasjimenez/myrepos/dotnetalgorithms/obj/Debug/netcoreapp3.0/dotnetalgorithms.csprojAssemblyReference.cache
+/Users/nicolasjimenez/myrepos/dotnetalgorithms/obj/Debug/netcoreapp3.0/dotnetalgorithms.AssemblyInfoInputs.cache
+/Users/nicolasjimenez/myrepos/dotnetalgorithms/obj/Debug/netcoreapp3.0/dotnetalgorithms.AssemblyInfo.cs
+/Users/nicolasjimenez/myrepos/dotnetalgorithms/obj/Debug/netcoreapp3.0/dotnetalgorithms.dll
+/Users/nicolasjimenez/myrepos/dotnetalgorithms/obj/Debug/netcoreapp3.0/dotnetalgorithms.pdb
